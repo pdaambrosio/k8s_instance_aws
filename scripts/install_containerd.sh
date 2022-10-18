@@ -36,4 +36,3 @@ EOF
 sudo dnf install -y kubeadm kubelet kubectl
 sudo systemctl enable kubelet
 sudo echo 'KUBELET_EXTRA_ARGS="--fail-swap-on=false"' > /etc/sysconfig/kubelet
-sudo systemctl start kubelet
