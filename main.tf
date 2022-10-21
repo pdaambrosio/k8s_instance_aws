@@ -27,6 +27,7 @@ module "ec2_kubernetes_redhat" {
   security_group_id           = data.aws_security_group.default_sg.id
   user_data                   = "./scripts/install_containerd.sh"
   associate_public_ip_address = true
+  volume_size                 = 20
 
   extra_tags = {
     Env = "IaC"

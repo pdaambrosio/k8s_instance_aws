@@ -22,6 +22,9 @@ sudo mkdir -p /etc/containerd
 sudo containerd config default > /etc/containerd/config.toml
 sudo systemctl restart containerd
 sudo systemctl enable containerd
+sudo dnf install iscsi-initiator-utils -y
+sudo systemctl enable iscsid
+sudo systemctl start iscsid
 
 sudo cat <<EOF > /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
