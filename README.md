@@ -14,7 +14,7 @@ module "example" {
 
 	 # Optional variables
 	 availability_zone  = "us-east-1a"
-	 profile  = "terraform"
+	 profile  = "default"
 	 region  = "us-east-1"
 }
 ```
@@ -30,14 +30,15 @@ module "example" {
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_availability_zone"></a> [availability\_zone](#input\_availability\_zone) | The AWS availability zone to use | `string` | `"us-east-1a"` | no |
-| <a name="input_profile"></a> [profile](#input\_profile) | AWS profile to use | `string` | `"terraform"` | no |
+| <a name="input_profile"></a> [profile](#input\_profile) | AWS profile to use | `string` | `"default"` | no |
 | <a name="input_region"></a> [region](#input\_region) | The AWS region to use | `string` | `"us-east-1"` | no |
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_private_key"></a> [private\_key](#output\_private\_key) | n/a |
-| <a name="output_security_group_default_id"></a> [security\_group\_default\_id](#output\_security\_group\_default\_id) | n/a |
-| <a name="output_subnet_default_id"></a> [subnet\_default\_id](#output\_subnet\_default\_id) | n/a |
-| <a name="output_vpc_default_id"></a> [vpc\_default\_id](#output\_vpc\_default\_id) | n/a |
+| <a name="output_private_key_control_plane"></a> [private\_key\_control\_plane](#output\_private\_key\_control\_plane) | Private Key |
+| <a name="output_private_key_worker"></a> [private\_key\_worker](#output\_private\_key\_worker) | Private Key |
+| <a name="output_security_group_default_id"></a> [security\_group\_default\_id](#output\_security\_group\_default\_id) | Default Security Group ID |
+| <a name="output_subnet_default_id"></a> [subnet\_default\_id](#output\_subnet\_default\_id) | Default Subnet ID |
+| <a name="output_vpc_default_id"></a> [vpc\_default\_id](#output\_vpc\_default\_id) | Default VPC ID |
 <!-- END_AUTOMATED_TF_DOCS_BLOCK -->
