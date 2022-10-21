@@ -33,6 +33,7 @@ module "ec2_kubernetes_control_plane_redhat" {
     Env = "IaC"
   }
 }
+
 module "ec2_kubernetes_worker_redhat" {
   source                      = "git@github.com:pdaambrosio/module_ec2_aws.git"
   servers                     = 2
