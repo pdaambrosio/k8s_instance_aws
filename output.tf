@@ -13,13 +13,13 @@ output "security_group_default_id" {
   description = "Default Security Group ID"
 }
 
-output "private_key" {
+output "private_key_control_plane" {
   value     = module.ec2_kubernetes_control_plane_redhat.private_key
   sensitive = true
   description = "Private Key"
 }
 
-output "private_key" {
+output "private_key_worker" {
   value     = module.ec2_kubernetes_worker_redhat.private_key
   sensitive = true
   description = "Private Key"
