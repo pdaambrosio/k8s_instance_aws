@@ -27,12 +27,9 @@ jobs:
       with:
         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
-    # - name: ssh-add
-    #   run: |
-    #     echo "${{ secrets.SSH_PRIVATE_KEY }}" > id_rsa
-    #     ssh-keyscan github.com > known_hosts
-    #     chmod 600 id_rsa known_hosts
-    #     git config --global url."https://oauth2:${{ secrets.TOKEN_GITHUB }}@github.com".insteadOf ssh://git@github.com
+    - name: ssh-add
+      run: |
+        git config --global url."https://oauth2:${{ secrets.TOKEN_GITHUB }}@github.com".insteadOf ssh://git@github.com
 
     - name: Terraform Init
       # working-directory: terraform
