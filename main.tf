@@ -18,7 +18,7 @@ data "aws_security_group" "default_sg" {
 }
 
 module "ec2_kubernetes_control_plane_redhat" {
-  source                      = "git@github.com:pdaambrosio/module_ec2_aws.git"
+  source                      = "https://github.com/pdaambrosio/module_ec2_aws"
   servers                     = 3
   prefix                      = "k8s-control-plane-redhat"
   instance_type               = "t3.medium"
@@ -35,7 +35,7 @@ module "ec2_kubernetes_control_plane_redhat" {
 }
 
 module "ec2_kubernetes_worker_redhat" {
-  source                      = "git@github.com:pdaambrosio/module_ec2_aws.git"
+  source                      = "https://github.com/pdaambrosio/module_ec2_aws"
   servers                     = 2
   prefix                      = "k8s-worker-redhat"
   instance_type               = "t3.medium"
